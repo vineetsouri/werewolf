@@ -1,5 +1,14 @@
 class Player
-  def initialize(wolf = false)
-    @wolf? = wolf?
+  def initialize(is_wolf = false)
+    @is_wolf = is_wolf    
+    @alive = true
+  end
+
+  def wolf?
+    @is_wolf
+  end
+
+  def kill!
+    @alive = false
   end
 end
