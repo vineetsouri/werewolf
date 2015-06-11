@@ -1,3 +1,4 @@
+require_relative 'player'
 class Game
   def initialize(no_of_wolves,no_of_villagers)
     @players = []
@@ -5,7 +6,11 @@ class Game
       @players.push(player.new(true))
     end
     no_of_villagers.times do
-      @players.push(player.new(false))
+      @players.push(player.new)
     end
+  end
+
+  def players
+    return @players
   end
 end
